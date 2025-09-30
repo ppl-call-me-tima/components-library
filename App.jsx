@@ -1,39 +1,29 @@
-import Banner from "./components/Banner/index"
+import { HiOutlineCloudUpload } from "react-icons/hi";
+import { RiGameFill } from "react-icons/ri";
+import { VscHeartFilled } from "react-icons/vsc";
+
+import Card from "./components/Card/index"
 
 export default function App() {
   return (
     <>
-      <Banner type="congratulate">
-        <Banner.TitleBar>
-          Congratulations!
-        </Banner.TitleBar>
-      </Banner>
+      <Card>
+        <Card.Icon><HiOutlineCloudUpload /></Card.Icon>
+        <Card.Title>This is the Title of the Card</Card.Title>
+        <Card.Content>And these are the contents of the card.</Card.Content>
+      </Card>
 
-      <Banner type="error">
-        <Banner.TitleBar>
-          Error occurred!
-        </Banner.TitleBar>
+      <Card>
+        <Card.Icon><RiGameFill /></Card.Icon>
+        <Card.Title>Game of the Century</Card.Title>
+        <Card.Content>Pacman has been awarded the title of the Game of the Century because it's such an awesome game!</Card.Content>
+      </Card>
 
-        <Banner.Content>
-          Looks like you made an oopsies...
-        </Banner.Content>
-      </Banner>
-
-      <Banner type="attention">
-        <Banner.TitleBar>
-          This needs your atatention!
-        </Banner.TitleBar>
-
-        <Banner.Content>
-          Something major has been affected, please check.
-        </Banner.Content>
-      </Banner>
-
-      <Banner type="update">
-        <Banner.TitleBar>
-          Updates Required
-        </Banner.TitleBar>
-      </Banner>
+      <Card>
+        <Card.Icon><VscHeartFilled /></Card.Icon>
+        <Card.Title>Heart from VSC?</Card.Title>
+        <Card.Content>I have no idea why this exists but it's a heart from the VS Code icon pack. It's cute.</Card.Content>
+      </Card>
     </>
   )
 }
