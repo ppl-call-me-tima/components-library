@@ -1,19 +1,21 @@
-export default function Card({ children }) {
-  // TODO: hover shadows
+import React, { useState } from "react"
 
-  function handleMouseEnter(e) {
-    console.log("enter")
+export default function Card({ children }) {
+  const [hover, setHover] = useState(false)
+
+  function handleMouseEnter() {
+    setHover(true)
   }
 
-  function handleMouseLeave(e) {
-    console.log("leave")
+  function handleMouseLeave() {
+    setHover(false)
   }
 
   return (
     <div className="card-outer">
       <div className="card-empty"></div>
-      <div 
-        className="card-inner"
+      <div
+        className={`card-inner ${hover ? "hover" : ""}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >{children}</div>
