@@ -238,6 +238,13 @@ body {
   width: 100%;
 
   background-color: #2545B8;
+  color: white;
+}
+
+.testimonial-inner-no-image {
+  color: black;
+  background-color: white;
+  text-align: center;
 }
 
 .testimonial-image {
@@ -252,10 +259,13 @@ body {
 
 .testimonial-content {
   margin: 0% 5%;
-  color: white;
 
   display: flex;
   flex-direction: column;
+}
+
+.testimonial-content-no-image {
+  margin: 0% 25%;
 }
 
 .testimonial-quote {
@@ -267,8 +277,18 @@ body {
   font-weight: 700;
 }
 
+.testimonial-name-no-image {
+  color: #111827;
+  font-weight: 700;
+}
+
 .testimonial-role {
   font-weight: 300;
+}
+
+.testimonial-role-no-image {
+  color: #6B7280;
+  font-weight: 400;
 }
 
 @media (orientation: portrait) {

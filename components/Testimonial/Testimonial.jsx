@@ -1,6 +1,7 @@
-import React from "react"
+import React, { createContext } from "react"
 import Image from "./Image"
-import { ImQuotesLeft } from "react-icons/im";
+
+const TestimonialContext = createContext()
 
 export default function Testimonial({ children }) {
   const image = []
@@ -14,15 +15,20 @@ export default function Testimonial({ children }) {
     }
   })
 
+  const imageExists = image.length === 1
+
   return (
-    <div className="testimonial-outer">
-      <div className="testimonial-inner">
-        {image}
-        <div className="testimonial-content">
-          <ImQuotesLeft style={{ color: "#FFFFFF25", height: "43px", width: "43px" }} />
-          {content}
+    <TestimonialContext.Provider value={{ imageExists }}>
+      <div className="testimonial-outer">
+        <div className={`testimonial-inner ${imageExists ? "" : "testimonial-inner-no-image"}`}>
+          {image}
+          <div className={`testimonial-content ${imageExists ? "" : "testimonial-content-no-image"}`}>
+            {content}
+          </div>
         </div>
       </div>
-    </div>
+    </TestimonialContext.Provider>
   )
 }
+
+export { TestimonialContext }

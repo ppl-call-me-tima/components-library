@@ -5,9 +5,9 @@ export default function App() {
   return (
     <>
       <Test>
-        <Test.Image>
+        {/* <Test.Image>
           <img src={img2} />
-        </Test.Image>
+        </Test.Image> */}
 
         <Test.Quote>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
