@@ -291,6 +291,11 @@ body {
   font-weight: 400;
 }
 
+.testimonial-author-no-image {
+  display: flex;
+  justify-content: center;
+}
+
 @media (orientation: portrait) {
   .testimonial-outer {
     width: 80%;
@@ -300,6 +305,7 @@ body {
 
   .testimonial-inner {
     flex-direction: column;
+    justify-content: center;
     min-height: 1%;
     flex-grow: 1;
   }
@@ -311,5 +317,22 @@ body {
     margin-bottom: 10%;
     object-fit: cover;
     object-position: center;
+  }
+
+  .testimonial-content-no-image {
+    margin: 0% 5%;
+  }
+
+  .testimonial-inner-no-image {
+    text-align: left;
+  }
+
+  .testimonial-author-no-image {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .testimonial-author-slash {
+    display: none;
   }
 }

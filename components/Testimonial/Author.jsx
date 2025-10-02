@@ -10,9 +10,9 @@ export default function Role({ name, role }) {
       <span className="testimonial-role">{role}</span>
     </>
   ) : (
-    <div>
+    <div className="testimonial-author-no-image">
       <span className="testimonial-name-no-image">{name}</span>
-      <span style={{color: "#2E59F3", fontWeight: "800", margin: "0% 1%"}}>/</span>
+      <span className="testimonial-author-slash" style={{color: "#2E59F3", fontWeight: "800", margin: "0% 1%"}}>/</span>
       <span className="testimonial-role-no-image">{role}</span>
     </div>
   )
