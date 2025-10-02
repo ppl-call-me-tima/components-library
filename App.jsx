@@ -1,14 +1,23 @@
-import Testimonial from "./components/Testimonial/index"
+import Test from "./components/Testimonial/index"
 import img2 from "./assets/img2.jpg"
 
 export default function App() {
   return (
     <>
-      <Testimonial>
-        <Testimonial.Image>
+      <Test>
+        <Test.Image>
           <img src={img2} />
-        </Testimonial.Image>
-      </Testimonial>
+        </Test.Image>
+
+        <Test.Quote>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+        </Test.Quote>
+
+        <Test.Author
+          name="May Andersons"
+          role="Workcation, CTO"
+        />
+      </Test>
     </>
   )
 }
